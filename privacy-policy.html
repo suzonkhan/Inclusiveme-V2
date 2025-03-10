@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Homepage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet">
+    <!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="assets/css/main-style.css">
+</head>
+<body x-data="{ direction: 'ltr' }" :dir="direction">
+<header x-data="{ showTranslationSwitch: false, showSearchBar: false }" class="site-header">
+    <div x-show="showTranslationSwitch" :class="{ 'show-translation-switch': showTranslationSwitch }"
+         class="language-switch-wrapper">
+        <div class="language-select-card">
+            <div>
+                <h1>Hello!
+                    <strong>Choose a language.</strong>
+                </h1>
+            </div>
+            <div class="available-language-wrapper">
+                <button @click="direction = 'ltr', showTranslationSwitch = false">
+                    <strong>En</strong>
+                    English
+                </button>
+                <button @click="direction = 'ltr', showTranslationSwitch = false">
+                    <strong>কখ</strong>
+                    বাংলা
+                </button>
+                <button @click="direction = 'rtl', showTranslationSwitch = false">
+                    <strong>ب ا</strong>
+                    عربي
+                </button>
+            </div>
+            <div class="translation-intro">
+                <p class="heading">Read news in your own language</p>
+                <p>Stay informed with ease by reading news in your own language. Access local and international news in
+                    the
+                    language you're most comfortable with.</p>
+            </div>
+        </div>
+    </div>
+    <div class="top-header">
+        <div class="container">
+            <div class="row align-items-center row-gap-sm-2">
+                <div class="col-lg-4 col-md-12">
+                    <div class="top-header-menu">
+                        <ul>
+                            <li><a href="">About</a></li>
+                            <li><a href="">Advertise</a></li>
+                            <li><a href="">Privacy Policy</a></li>
+                            <li><a href="">Terms & Condition</a></li>
+                            <li><a href="">Contact</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="col-lg-4 col-sm-6 text-lg-center">
+                    24 May, 2024
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="top-header-social-media">
+                        <ul>
+                            <li><a href=""><img src="assets/images/Faceboox-16.svg" alt=""></a></li>
+                            <li><a href=""><img src="assets/images/Instagram-16.svg" alt=""></a></li>
+                            <li><a href=""><img src="assets/images/YouTube-16.svg" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div x-data="{ mobileMenu: false }" :class="{ 'mobile-menu-active': mobileMenu }" class="main-header">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="main-header-inner">
+                        <div class="main-logo">
+                            <a href=""><img src="assets/images/Logo.svg" alt=""></a>
+                        </div>
+                        <div class="main-menu">
+                            <ul>
+                                <li class="current-menu-item"><a href="news-category.html">Top</a></li>
+                                <li><a href="news-category.html">Featured</a></li>
+                                <li><a href="news-category.html">Politics</a></li>
+                                <li><a href="news-category.html">Sports</a></li>
+                                <li><a href="news-category.html">Opinion</a></li>
+                                <li><a href="news-category.html">Business</a></li>
+                                <li><a href="news-category.html">Youth</a></li>
+                                <li><a href="news-category.html">Lifestyle</a></li>
+                                <li class="highlighted-item"><a href="">Sing Up</a></li>
+                            </ul>
+                        </div>
+                        <div class="special-menu">
+                            <ul>
+                                <li>
+                                    <button @click="showSearchBar = !showSearchBar"><img
+                                            src="assets/images/Search-20.svg" alt=""></button>
+                                    <div x-show="showSearchBar" :class="{ 'show-search-bar': showSearchBar }"
+                                         class="special-menu-dropdown-wrapper">
+                                        <form action="">
+                                            <input type="search" placeholder="Search">
+                                        </form>
+                                    </div>
+                                </li>
+                                <li>
+                                    <button @click="showTranslationSwitch = !showTranslationSwitch"><img
+                                            src="assets/images/Globe-20.svg" alt=""></button>
+                                </li>
+                                <li class="highlighted-item"><a href="">Sing Up</a></li>
+                                <li class="mobile-menu-trigger">
+                                    <button @click="mobileMenu = !mobileMenu"><span></span></button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</header>
+
+<main class="news-details-page-wrapper">
+
+    <figure class="news-details-cover">
+        <img src="assets/images/demo/news-details-image.png" alt="">
+    </figure>
+    <article class="container">
+        <header class="news-details-header">
+            <div class="news-meta">
+                <ul>
+                    <li>From <a href="">New York Times</a></li>
+                    <li>
+                        <time datetime="2024-06-06">June 6, 2024</time>
+                    </li>
+                </ul>
+            </div>
+            <h1 class="news-details-title">Office of Israeli Prime Minister Benjamin Netanyahu rejects Gantz’s
+                threat to leave the government</h1>
+        </header>
+        <section class="news-body-section">
+            <div class="news-body-wrapper">
+                <div class="news-social-share">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M4 7C4 4.23858 6.23858 2 9 2H14.9999C17.7614 2 19.9999 4.23858 19.9999 7V18.9892C19.9999 21.5429 17.0126 22.9289 15.0627 21.2799L12.6457 19.2358C12.273 18.9205 11.727 18.9205 11.3542 19.2358L8.93724 21.2799C6.98734 22.9289 4 21.543 4 18.9892V7ZM9 4C7.34315 4 6 5.34315 6 7V18.9892C6 19.8405 6.99578 20.3025 7.64575 19.7528L10.0628 17.7087C11.1811 16.7629 12.8189 16.7629 13.9372 17.7087L16.3542 19.7528C17.0042 20.3024 17.9999 19.8405 17.9999 18.9892V7C17.9999 5.34315 16.6568 4 14.9999 4H9Z"
+                                          fill="#171717"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M22 12C22 16.9964 18.3357 21.1369 13.5479 21.8809C13.2558 21.9263 13 21.6942 13 21.3985V14H15C15.5523 14 16 13.5523 16 13C16 12.4477 15.5523 12 15 12H13V10C13 9.44772 13.4477 9 14 9H15C15.5523 9 16 8.55228 16 8C16 7.44772 15.5523 7 15 7H14C12.3431 7 11 8.34315 11 10V12H10C9.44772 12 9 12.4477 9 13C9 13.5523 9.44772 14 10 14H11V21.3985C11 21.6942 10.7442 21.9263 10.4521 21.8809C5.66427 21.1369 2 16.9964 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                                          fill="#005F86"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M3 7C3 4.79086 4.79086 3 7 3H17C19.2091 3 21 4.79086 21 7V17C21 19.2091 19.2091 21 17 21H7C4.79086 21 3 19.2091 3 17V7ZM12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10ZM8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12ZM17.5 7.5C18.0523 7.5 18.5 7.05228 18.5 6.5C18.5 5.94772 18.0523 5.5 17.5 5.5C16.9477 5.5 16.5 5.94772 16.5 6.5C16.5 7.05228 16.9477 7.5 17.5 7.5Z"
+                                          fill="#005F86"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M5.58971 4.20941C3.72849 4.33555 2.29215 5.81694 2.1711 7.6785C2.08072 9.06851 2 10.6796 2 12C2 13.3204 2.08072 14.9315 2.1711 16.3215C2.29215 18.1831 3.72849 19.6645 5.58971 19.7906C7.21433 19.9007 9.40027 20 12 20C14.5997 20 16.7857 19.9007 18.4103 19.7906C20.2715 19.6645 21.7078 18.1831 21.8289 16.3215C21.9193 14.9315 22 13.3204 22 12C22 10.6796 21.9193 9.06851 21.8289 7.6785C21.7078 5.81694 20.2715 4.33555 18.4103 4.20941C16.7857 4.09931 14.5997 4 12 4C9.40027 4 7.21433 4.09931 5.58971 4.20941ZM11.5521 9.16779C10.8873 8.72764 10 9.20432 10 10.0016V13.9987C10 14.7959 10.8873 15.2726 11.552 14.8325L14.5454 12.8507C15.1546 12.4474 15.1547 11.5531 14.5455 11.1498L11.5521 9.16779Z"
+                                          fill="#005F86"/>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="news-body">
+                    <div class="news-listening">
+                        <button><img src="assets/images/Microphone.svg" alt=""></button>
+                        <div>Listen to the audio version of the article</div>
+                    </div>
+                    <p class="text-lg text-dark-80 mb-30">
+                        Editor’s note: CNN Chief Medical Correspondent Dr. Sanjay Gupta is a practicing
+                        neurosurgeon and best-selling author on brain health. “The Last Alzheimer’s Patient”
+                        premieres on “The Whole Story with Anderson Cooper” on Sunday, May 19, at 8 p.m.
+                        ET/PT
+                        on CNN and streams on MAX on June 18.
+                    </p>
+
+                    <p class="text-dark-60 mb-30">Dr Richard Isaacson stared at the numbers on the fax in astonishment.
+                        Blood
+                        biomarkers of telltale signs of early Alzheimer’s disease in the brain of his
+                        patient, 55-year-old entrepreneur Simon Nicholls, had all but disappeared in a mere
+                        14 months.</p>
+
+                    <p class="text-dark-60 mb-30"><span class="text-primary-100">“I had to catch my breath. It was a complete shock: The blood tests on his brain had
+                        normalized,”</span> said Isaacson, director of research at the Institute for
+                        Neurodegenerative Diseases in Boca Raton, Florida.</p>
+
+                    <p class="text-dark-60 mb-30">Was this stunning result the work of some new miracle drug designed to
+                        combat
+                        dementia? Not at all. This is a story of old-fashioned grit and determination.</p>
+
+                    <p class="text-dark-60 mb-30">“Simon was on a mission, as if the Grim Reaper was peering over his
+                        shoulder. He was
+                        going to kick ass and take names,” Isaacson said.</p>
+                    <p class="text-dark-60 mb-30">Nicholls reduced his risk of developing Alzheimer’s via lifestyle
+                        changes
+                        recommended by
+                        Isaacson, including diet, exercise, reducing stress and optimizing sleep, along with a few
+                        strategically chosen supplements and medications prescribed by his cardiologist.</p>
+
+                    <p class="text-dark-60 mb-30">“I was very worried,” Nicholls told CNN Chief Medical Correspondent
+                        Dr.
+                        Sanjay Gupta in his new
+                        documentary, “The Last Alzheimer’s Patient,” which is airing on “The Whole Story with Anderson
+                        Cooper.”</p>
+
+                    <p class="text-dark-60 mb-30">“I have a 3-year-old son and an 8-year-old son. It’s really important
+                        for
+                        me, as I get older, to
+                        try and be there for them in the future,” he said. “There are many [changes] in lifestyle you
+                        can do to hopefully push the disease backwards and give yourself more time, which is all we need
+                        until we find a cure.”</p>
+                    <p class="text-dark-60 mb-30">“I have a 3-year-old son and an 8-year-old son. It’s really important
+                        for
+                        me, as I get older, to try and be there for them in the future,” he said. “There are many
+                        [changes] in lifestyle you can do to hopefully push the disease backwards and give yourself more
+                        time, which is all we need until we find a cure.”</p>
+                    <p class="text-dark-60 mb-30">“I have a 3-year-old son and an 8-year-old son. It’s really important
+                        for
+                        me, as I get older, to try and be there for them in the future,” he said. “There are many
+                        [changes] in lifestyle you can do to hopefully push the disease backwards and give yourself more
+                        time, which is all we need until we find a cure.”</p>
+
+                </div>
+                <div class="news-body">
+                    <div class="card">
+                        <div class="card-header">
+                            Translation
+                        </div>
+                        <div class="card-body">
+                            <figure class="translated-news-cover">
+                                <img src="assets/images/demo/news-video.png" alt="">
+                            </figure>
+                            <div class="news-listening">
+                                <button><img src="assets/images/Microphone.svg" alt=""></button>
+                                <div>Listen to the audio version of the article</div>
+                            </div>
+                            <h2 class="h5 text-primary-100 mb-30">বগুড়ায় এত বাল্যবিয়ে কেন, কী বলছে বাসিন্দারা</h2>
+                            <p class="text-dark-80 mb-30">
+                                কিশোর-কিশোরী ক্লাবের অনুষ্ঠানে আর সবার সঙ্গে গাইত মেয়েটি, ‘প্রতিদিন তোমায় দেখি
+                                সূর্য-রাগে।’ লাল-সবুজ শাড়ি, টিকলি-টায়রা, কানে দুল আর মাথায় প্লাস্টিকের ফুল লাগিয়ে
+                                ‘জ্বলে ওঠো বাংলাদেশ’ গানের সঙ্গে নাচত। সেই জ্বলে ওঠা আর হয়নি মেয়েটির।
+                            </p>
+
+                            <p class="text-dark-80 mb-30">২০২২ সালের শেষের দিকে এক ঈদের ছুটিতে বিয়ে হয়ে যায় মেয়েটির। তখন
+                                সে সপ্তম শ্রেণির
+                                ছাত্রী। বিয়ের সঙ্গে সঙ্গে স্কুল ও ক্লাবের পাটও চুকে যায় তার। ছোটখাটো গড়নের, দুর্বল
+                                মেয়েটির কোলে এখন আট মাসের কন্যাশিশু।</p>
+
+                            <p class="text-dark-80 mb-30">জন্মনিবন্ধন অনুসারে মেয়েটির বয়স ১৪ বছর। থাকে শ্বশুরবাড়িতে;
+                                বগুড়ার শিবগঞ্জ উপজেলার
+                                আটমূল ইউনিয়নে। গত ১৮ এপ্রিল সেখানেই কথা হয় তার সঙ্গে। বেলা তখন ১১টা। কোলের শিশুটি
+                                বিছানায় ঘুমাচ্ছে। টিনের চালা আর মাটির মেঝের ঘর। বারান্দায় প্লাস্টিকের চেয়ার পেতে বসে
+                                কথা শুরু হয়। মেয়েটি জানায়, এনজিও টিএমএসএসের কিশোর-কিশোরী ক্লাবের সদস্য থাকার সময়
+                                নানা অনুষ্ঠানে অংশ নিয়েছে। সেবার (২০২২) অনুষ্ঠানের পাঁচ দিন পর তার বিয়ে হয়ে যায়।</p>
+
+                            <p class="text-dark-80 mb-30">এত ছোট থাকতে মা-বাবা কেন বিয়ে দিলেন—জানতে চাইলে লাজুক হাসে
+                                মেয়েটি। বলে, ‘দাদির হাউস
+                                থেকে মা-বাবা বিয়ে দিছে। মা-বাবা বলছে, এখনকার দিন-সমাজ ভালো না। ভালো ছেলে পাইছে, তাই
+                                বিয়া দিয়া দিছে।’ মেয়েটির বাবা ইজিবাইকের চালক। চার বোনের মধ্যে সে সবার বড়। স্বামী
+                                (২৪) ইটভাটায় কাজ করেন। পড়াশোনা কেন বন্ধ হলো জানতে চাইলে বলল, স্বামী চান না।</p>
+
+                            <p class="text-dark-80 mb-30">ওই বাড়ি থেকে বের হতেই মেয়েটির জায়ের সঙ্গে দেখা হয়। খড়ের গাদা
+                                গোছাতে গোছাতে ১৬ বছরের
+                                এই মেয়ে জানাল, বছরখানেক আগে মালয়েশিয়াপ্রবাসীর সঙ্গে মুঠোফোনে তার বিয়ে হয়েছে।
+                                স্বামীকে এখনো সামনাসামনি দেখেনি।</p>
+                            <p class="text-dark-80 mb-30">জেলা ও উপজেলা পর্যায়ে বাল্যবিবাহের প্রবণতা নিয়ে গত এপ্রিলে
+                                বাংলাদেশ পরিসংখ্যান ব্যুরো
+                                (বিবিএস) একটি প্রতিবেদন প্রকাশ করে। প্রতিবেদন বলছে, বাল্যবিবাহের উচ্চ হারের দিক থেকে
+                                বগুড়া শীর্ষ তিন জেলার একটি। বাকি দুই জেলা জয়পুরহাট ও চাঁপাইনবাবগঞ্জ। জেলায় ১৮ বছরের
+                                নিচে বাল্যবিবাহের হার ৬৩ শতাংশের বেশি। আর ১৫ বছরের নিচে এ হার ২০ শতাংশের বেশি।
+                                বাল্যবিবাহের হার বেশি শিবগঞ্জ ও সারিয়াকান্দি উপজেলায়, যথাক্রমে যা ৬৩ ও ৬৫ শতাংশ।</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+    </article>
+    <section class="relative-news-section">
+        <div class="container">
+            <div class="relative-news-section-wrapper">
+                <div>
+                    <h2 class="news-block-heading"><span>UP</span> Next</h2>
+                    <div class="thumbnail-news-list-wrapper">
+                        <div class="news-box">
+                            <div class="news-box-inner">
+                                <div class="news-thumbnail">
+                                    <a href=""><img src="assets/images/demo/news-image-thumb-01.png" alt=""></a>
+                                </div>
+                                <div class="news-info">
+                                    <div class="news-headline">
+                                        <h3><a href="">How low intensity exercise linked to reduced risks of depression</a>
+                                        </h3>
+                                    </div>
+
+                                    <div class="news-meta">
+                                        <ul>
+                                            <li>From <a href="">New York Times</a></li>
+                                            <li>Jul 27, 2024</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news-box">
+                            <div class="news-box-inner">
+                                <div class="news-thumbnail">
+                                    <a href=""><img src="assets/images/demo/news-image-thumb-02.png" alt=""></a>
+                                </div>
+                                <div class="news-info">
+                                    <div class="news-headline">
+                                        <h3><a href="">How low intensity exercise linked to reduced risks of depression</a>
+                                        </h3>
+                                    </div>
+
+                                    <div class="news-meta">
+                                        <ul>
+                                            <li>From <a href="">New York Times</a></li>
+                                            <li>Jul 27, 2024</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news-box">
+                            <div class="news-box-inner">
+                                <div class="news-thumbnail">
+                                    <a href=""><img src="assets/images/demo/news-image-thumb-03.png" alt=""></a>
+                                </div>
+                                <div class="news-info">
+                                    <div class="news-headline">
+                                        <h3><a href="">How low intensity exercise linked to reduced risks of depression</a>
+                                        </h3>
+                                    </div>
+
+                                    <div class="news-meta">
+                                        <ul>
+                                            <li>From <a href="">New York Times</a></li>
+                                            <li>Jul 27, 2024</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news-box">
+                            <div class="news-box-inner">
+                                <div class="news-thumbnail">
+                                    <a href=""><img src="assets/images/demo/news-image-thumb-04.png" alt=""></a>
+                                </div>
+                                <div class="news-info">
+                                    <div class="news-headline">
+                                        <h3><a href="">How low intensity exercise linked to reduced risks of depression</a>
+                                        </h3>
+                                    </div>
+
+                                    <div class="news-meta">
+                                        <ul>
+                                            <li>From <a href="">New York Times</a></li>
+                                            <li>Jul 27, 2024</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div>
+                    <div class="tab-header">
+                        <button class="tab-nav-item active-tab-nav-item">Latest</button>
+                        <button class="tab-nav-item">Trending</button>
+                    </div>
+                    <div class="numbered-news-list-wrapper">
+                        <ul>
+                            <li><a href="">City Marathon Attracts International Runners and Fans</a></li>
+                            <li><a href="">Gulshan building fire under control, four more critically injured</a></li>
+                            <li><a href="">Upazila polls AL unable to adopt hardline against relatives of MPs, ministers</a>
+                            </li>
+                            <li><a href="">PM Hasina urges all to say 'no' to wars</a></li>
+                            <li><a href="">How low intensity exercise linked to reduced risks of depression Lorem ipsum
+                                dolor sit amet, consectetur adipisicing elit. Delectus, ipsam.</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</main>
+<footer class="site-footer">
+
+    <div class="footer-branding">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <a href=""><img src="assets/images/Logo-Light.svg" alt=""></a>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer-navigation">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2 col-md-3 col-sm-4">
+                        <div class="footer-widget footer-menu-widget">
+                            <h3 class="footer-widget-title">CITY NEWS</h3>
+                            <ul>
+                                <li><a href="">Urban Projects</a></li>
+                                <li><a href="">Local Business</a></li>
+                                <li><a href="">Public Safety Updates</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4">
+                        <div class="footer-widget footer-menu-widget">
+                            <h3 class="footer-widget-title">International</h3>
+                            <ul>
+                                <li><a href="">Road Conditions</a></li>
+                                <li><a href="">Mobility Solutions</a></li>
+                                <li><a href="">Cycling Paths</a></li>
+                                <li><a href="">Electric Transport</a></li>
+                                <li><a href="">City Navigation</a></li>
+                                <li><a href="">Infrastructure Development</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4">
+                        <div class="footer-widget footer-menu-widget">
+                            <h3 class="footer-widget-title">WEATHER</h3>
+                            <ul>
+                                <li><a href="">Weather Patterns</a></li>
+                                <li><a href="">Weather Alerts</a></li>
+                                <li><a href="">Historical Trends</a></li>
+                                <li><a href="">Weather Safety Tips</a></li>
+                                <li><a href="">Daily Weather Forecasts</a></li>
+                                <li><a href="">Climate Change Impact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4">
+                        <div class="footer-widget footer-menu-widget">
+                            <h3 class="footer-widget-title">HEALTH</h3>
+                            <ul>
+                                <li><a href="">Fitness Trends</a></li>
+                                <li><a href="">Health Issues</a></li>
+                                <li><a href="">Health Education</a></li>
+                                <li><a href="">Local Health Services</a></li>
+                                <li><a href="">Public Health Campaigns</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-8">
+                        <div class="footer-widget footer-newsletter-widget">
+                            <h3 class="footer-widget-title">Keep Up to Date with the Most Important News</h3>
+                            <form class="newsletter-form" action="#">
+                                <input type="email" placeholder="Email">
+                                <button type="submit">Subscribe Now</button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        © 2024 Inclusiveme
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</footer>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.0/dist/cdn.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+// Generate Gap Classes
+@mixin generate-gap-classes($breakpoint) {
+  @include media-breakpoint-up($breakpoint) {
+    .row-gap-#{$breakpoint}-0 { row-gap: 0; }
+    .row-gap-#{$breakpoint}-1 { row-gap: 0.25rem; }
+    .row-gap-#{$breakpoint}-2 { row-gap: 0.5rem; }
+    .row-gap-#{$breakpoint}-3 { row-gap: 1rem; }
+    .row-gap-#{$breakpoint}-4 { row-gap: 1.5rem; }
+    .row-gap-#{$breakpoint}-5 { row-gap: 3rem; }
+
+    .column-gap-#{$breakpoint}-0 { column-gap: 0; }
+    .column-gap-#{$breakpoint}-1 { column-gap: 0.25rem; }
+    .column-gap-#{$breakpoint}-2 { column-gap: 0.5rem; }
+    .column-gap-#{$breakpoint}-3 { column-gap: 1rem; }
+    .column-gap-#{$breakpoint}-4 { column-gap: 1.5rem; }
+    .column-gap-#{$breakpoint}-5 { column-gap: 3rem; }
+  }
+}
+
+@include generate-gap-classes(sm);
+@include generate-gap-classes(md);
+@include generate-gap-classes(lg);
+@include generate-gap-classes(xl);
+@include generate-gap-classes(xxl);
+
+// Global Gap Classes
+.row-gap-0 { row-gap: 0; }
+.row-gap-1 { row-gap: 0.25rem; }
+.row-gap-2 { row-gap: 0.5rem; }
+.row-gap-3 { row-gap: 1rem; }
+.row-gap-4 { row-gap: 1.5rem; }
+.row-gap-5 { row-gap: 3rem; }
+
+.column-gap-0 { column-gap: 0; }
+.column-gap-1 { column-gap: 0.25rem; }
+.column-gap-2 { column-gap: 0.5rem; }
+.column-gap-3 { column-gap: 1rem; }
+.column-gap-4 { column-gap: 1.5rem; }
+.column-gap-5 { column-gap: 3rem; }
+
+
+// Generate Gap Classes
+@mixin generate-gap-classes($breakpoint) {
+  @include media-breakpoint-up($breakpoint) {
+    .g-#{$breakpoint}-0 { gap: 0; }
+    .g-#{$breakpoint}-1 { gap: 0.25rem; }
+    .g-#{$breakpoint}-2 { gap: 0.5rem; }
+    .g-#{$breakpoint}-3 { gap: 1rem; }
+    .g-#{$breakpoint}-4 { gap: 1.5rem; }
+    .g-#{$breakpoint}-5 { gap: 3rem; }
+  }
+}
+
+@include generate-gap-classes(sm);
+@include generate-gap-classes(md);
+@include generate-gap-classes(lg);
+@include generate-gap-classes(xl);
+@include generate-gap-classes(xxl);
+
+// Global Gap Classes
+.g-0 { gap: 0; }
+.g-1 { gap: 0.25rem; }
+.g-2 { gap: 0.5rem; }
+.g-3 { gap: 1rem; }
+.g-4 { gap: 1.5rem; }
+.g-5 { gap: 3rem; }

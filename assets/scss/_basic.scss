@@ -1,0 +1,99 @@
+html {
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: $dark-color-100;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page-wrapper {
+  padding: 30px 0 20px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+figure {
+  margin: 0;
+}
+
+.mb-50 {
+  margin-bottom: 50px;
+}
+
+.mb-40 {
+  margin-bottom: 40px;
+}
+
+.mb-30 {
+  margin-bottom: 30px !important;
+}
+
+.mb-20 {
+  margin-bottom: 20px !important;
+}
+
+.text-dark-100 {
+  color: $dark-color-100;
+}
+
+.text-dark-200 {
+  color: $dark-color-200;
+}
+
+.text-dark-300 {
+  color: $dark-color-300;
+}
+
+.text-dark-400 {
+  color: $dark-color-400;
+}
+
+.text-primary-100 {
+  color: $primary-color-100;
+}
+
+.text-primary-200 {
+  color: $primary-color-200;
+}
+
+.text-primary-300 {
+  color: $primary-color-300;
+}
+
+.text-primary-400 {
+  color: $primary-color-400;
+}
+
+.text-primary-500 {
+  color: $primary-color-500;
+}
+
+.bg-primary-100 {
+  background-color: $primary-color-100;
+}
+
+.bg-primary-200 {
+  background-color: $primary-color-200;
+}
+.bg-primary-300 {
+  background-color: $primary-color-300;
+}
+
+.news-section {
+  padding: 35px 50px;
+}

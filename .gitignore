@@ -1,0 +1,7 @@
+#Remove Unwanted Files
+*.txt
+# Ignore Bootstrap folder
+assets/bootstrap/
+assets/css/bootstrap-*.css
+assets/css/bootstrap-*.css.map
+

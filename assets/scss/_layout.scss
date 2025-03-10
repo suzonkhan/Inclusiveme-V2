@@ -1,0 +1,39 @@
+// Define container and gutter
+$container-width: 1240px;
+$gutter-width: 25px;
+$columns: 5;
+
+// Calculate total gutter space
+$total-gutter-space: ($columns - 1) * $gutter-width;
+
+// Calculate column width
+$column-width: ($container-width - $total-gutter-space) / $columns;
+
+// Mixin for grid columns
+@mixin col($span) {
+  width: ($column-width * $span) + ($gutter-width * ($span - 1));
+}
+
+// Container styling
+.container {
+  max-width: $container-width;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $gutter-width;
+}
+
+// Column styles
+.col {
+  flex: 0 0 auto;
+}
+
+// Generate column classes dynamically
+@for $i from 1 through $columns {
+  .col-#{$i} {
+    @include col($i);
+  }
+}

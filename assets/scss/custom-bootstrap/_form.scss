@@ -1,0 +1,103 @@
+@mixin form-control {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  appearance: none;
+  border-radius: 0.375rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+  &:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  }
+
+  &::-webkit-input-placeholder {
+    color: #6c757d;
+    opacity: 1;
+  }
+
+  &::-moz-placeholder {
+    color: #6c757d;
+    opacity: 1;
+  }
+
+  &:-ms-input-placeholder {
+    color: #6c757d;
+    opacity: 1;
+  }
+
+  &::-ms-input-placeholder {
+    color: #6c757d;
+    opacity: 1;
+  }
+
+  &::placeholder {
+    color: #6c757d;
+    opacity: 1;
+  }
+
+  &:disabled, &[readonly] {
+    background-color: #e9ecef;
+    opacity: 1;
+  }
+}
+.form-control {
+  @include form-control;
+  // Add any additional custom styles here
+}
+@mixin button($text-color: #212529, $background-color: transparent, $border-color: transparent, $padding-vertical: 0.375rem, $padding-horizontal: 0.75rem) {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  color: $text-color;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: $background-color;
+  border: 1px solid $border-color;
+  padding: $padding-vertical $padding-horizontal;
+  font-size: 1rem;
+  border-radius: 0.375rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+  &:hover {
+    color: darken($text-color, 10%);
+    text-decoration: none;
+  }
+
+  &:focus, &.focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  }
+
+  &:disabled, &.disabled {
+    pointer-events: none;
+    opacity: 0.65;
+  }
+}
+.button-primary {
+  @include button($text-color: #fff, $background-color: $primary-color-100, $border-color: $primary-color-100);
+}
+
+.button-secondary {
+  @include button($text-color: #fff, $background-color: $secondary-color-100, $border-color: $secondary-color-100);
+}
+
+.button-custom {
+  @include button($text-color: #fff, $background-color: #6c757d, $border-color: #6c757d);
+}

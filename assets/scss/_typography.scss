@@ -1,0 +1,57 @@
+%heading {
+  margin-top: 0;
+  margin-bottom: 16px * .5;
+  //font-family: "DM Serif Display", serif;
+  line-height: 120%;
+}
+
+h1, .h1 {
+  font-size: 64px;
+  @extend %heading;
+}
+
+h2, .h2 {
+  font-size: 45px;
+  @extend %heading;
+}
+
+h3, .h3 {
+  font-size: 32px;
+  @extend %heading;
+}
+
+h4, .h4 {
+  font-size: 23px;
+  @extend %heading;
+}
+
+h5, .h5 {
+  font-size: 16px;
+  @extend %heading;
+}
+
+h6, .h6 {
+  font-size: 11px;
+  @extend %heading;
+}
+
+p {
+  margin-top: 0;
+}
+
+.text-xl {
+  font-size: 1.5rem;
+  line-height: normal;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.6875rem;
+  letter-spacing: 0.02rem;
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.6875rem;
+  letter-spacing: 0.02rem;
+}

@@ -1,0 +1,25 @@
+body[dir="rtl"] {
+  direction: rtl;
+
+  .site-header {
+
+    .special-menu-dropdown-wrapper {
+      right: auto;
+      left: 0;
+    }
+  }
+
+
+  .news-body-wrapper {
+    padding: 30px 118px 30px 0;
+
+    .news-social-share {
+      left: auto;
+      right: -54px;
+    }
+  }
+}
+
+body[dir="ltr"] {
+  direction: ltr;
+}

@@ -1,0 +1,676 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Homepage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet">
+    <!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="assets/css/main-style.css">
+
+</head>
+<body x-data="{ direction: 'ltr' }" :dir="direction">
+
+
+<header x-data="{ showTranslationSwitch: false, showSearchBar: false }" class="site-header">
+    <div x-show="showTranslationSwitch" :class="{ 'show-translation-switch': showTranslationSwitch }"
+         class="language-switch-wrapper">
+        <div class="language-select-card">
+            <div>
+                <h1>Hello!
+                    <strong>Choose a language.</strong>
+                </h1>
+            </div>
+            <div class="available-language-wrapper">
+                <button @click="direction = 'ltr', showTranslationSwitch = false">
+                    <strong>En</strong>
+                    English
+                </button>
+                <button @click="direction = 'ltr', showTranslationSwitch = false">
+                    <strong>কখ</strong>
+                    বাংলা
+                </button>
+                <button @click="direction = 'rtl', showTranslationSwitch = false">
+                    <strong>ب ا</strong>
+                    عربي
+                </button>
+            </div>
+            <div class="translation-intro">
+                <p class="heading">Read news in your own language</p>
+                <p>Stay informed with ease by reading news in your own language. Access local and international news in
+                    the
+                    language you're most comfortable with.</p>
+            </div>
+        </div>
+    </div>
+    <div class="top-header">
+        <div class="container">
+            <div class="row align-items-center row-gap-sm-2">
+                <div class="col-lg-4 col-md-12">
+                    <div class="top-header-menu">
+                        <ul>
+                            <li><a href="">About</a></li>
+                            <li><a href="">Advertise</a></li>
+                            <li><a href="">Privacy Policy</a></li>
+                            <li><a href="">Terms & Condition</a></li>
+                            <li><a href="">Contact</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="col-lg-4 col-sm-6 text-lg-center">
+                    24 May, 2024
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="top-header-social-media">
+                        <ul>
+                            <li><a href=""><img src="assets/images/Faceboox-16.svg" alt=""></a></li>
+                            <li><a href=""><img src="assets/images/Instagram-16.svg" alt=""></a></li>
+                            <li><a href=""><img src="assets/images/YouTube-16.svg" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div x-data="{ mobileMenu: false }" :class="{ 'mobile-menu-active': mobileMenu }" class="main-header">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="main-header-inner">
+                        <div class="main-logo">
+                            <a href=""><img src="assets/images/Logo.svg" alt=""></a>
+                        </div>
+                        <div class="main-menu">
+                            <ul>
+                                <li class="current-menu-item"><a href="news-category.html">Top</a></li>
+                                <li><a href="news-category.html">Featured</a></li>
+                                <li><a href="news-category.html">Politics</a></li>
+                                <li><a href="news-category.html">Sports</a></li>
+                                <li><a href="news-category.html">Opinion</a></li>
+                                <li><a href="news-category.html">Business</a></li>
+                                <li><a href="news-category.html">Youth</a></li>
+                                <li><a href="news-category.html">Lifestyle</a></li>
+                                <li class="highlighted-item"><a href="">Sing Up</a></li>
+                            </ul>
+                        </div>
+                        <div class="special-menu">
+                            <ul>
+                                <li>
+                                    <button @click="showSearchBar = !showSearchBar"><img
+                                            src="assets/images/Search-20.svg" alt=""></button>
+                                    <div x-show="showSearchBar" :class="{ 'show-search-bar': showSearchBar }"
+                                         class="special-menu-dropdown-wrapper">
+                                        <form action="">
+                                            <input type="search" placeholder="Search">
+                                        </form>
+                                    </div>
+                                </li>
+                                <li>
+                                    <button @click="showTranslationSwitch = !showTranslationSwitch"><img
+                                            src="assets/images/Globe-20.svg" alt=""></button>
+                                </li>
+                                <li class="highlighted-item"><a href="">Sing Up</a></li>
+                                <li class="mobile-menu-trigger">
+                                    <button @click="mobileMenu = !mobileMenu"><span></span></button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</header>
+
+<main class="page-wrapper">
+    <div class="container">
+        <div class="row mb-50">
+            <div class="col">
+                <h1 class="news-category-name">Sports News</h1>
+            </div>
+        </div>
+        <div class="row mb-4 row-gap-4 mb-50">
+            <div class="col-lg-8">
+                <div class="lead-vertical-news-wrapper">
+                    <div class="news-box">
+                        <div class="news-box-inner">
+                            <div class="news-thumbnail">
+                                <a href="news-details.html"><img src="assets/images/demo/news-image-s5-01.png"
+                                                                 alt=""></a>
+                            </div>
+                            <div class="news-info">
+                                <div class="news-headline">
+                                    <h3><a href="news-details.html">Office of Israeli Prime Minister Benjamin Netanyahu
+                                        rejects Gantz’s
+                                        threat to
+                                        leave the government</a></h3>
+                                </div>
+                                <div class="news-summary">
+                                    <p>IDF recovers hostage’s body from Gaza one day after retrieving three others.
+                                        Desperate
+                                        Gazans grab aid boxes from moving trucks. Hear what ret. US general thinks about
+                                        Gantz’s
+                                        ultimatum to Netanyahu about Gaza plan </p>
+                                    <p>IDF recovers hostage’s body from Gaza one day after retrieving three others.
+                                        Desperate
+                                        Gazans grab aid boxes from moving trucks. Hear what ret. US general thinks about
+                                        Gantz’s
+                                        ultimatum to Netanyahu about Gaza plan </p>
+                                </div>
+                                <div class="news-meta">
+                                    <ul>
+                                        <li>From <a href="">New York Times</a></li>
+                                        <li>Jul 27, 2024</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-box">
+                        <div class="news-box-inner">
+                            <div class="news-thumbnail">
+                                <a href=""><img src="assets/images/demo/news-image-s5-01.png" alt=""></a>
+                            </div>
+                            <div class="news-info">
+                                <div class="news-headline">
+                                    <h3><a href="">Office of Israeli Prime Minister Benjamin Netanyahu
+                                        rejects Gantz’s
+                                        threat to
+                                        leave the government</a></h3>
+                                </div>
+                                <div class="news-summary">
+                                    <p>IDF recovers hostage’s body from Gaza one day after retrieving three others.
+                                        Desperate
+                                        Gazans grab aid boxes from moving trucks. Hear what ret. US general thinks about
+                                        Gantz’s
+                                        ultimatum to Netanyahu about Gaza plan </p>
+                                    <p>IDF recovers hostage’s body from Gaza one day after retrieving three others.
+                                        Desperate
+                                        Gazans grab aid boxes from moving trucks. Hear what ret. US general thinks about
+                                        Gantz’s
+                                        ultimatum to Netanyahu about Gaza plan </p>
+                                </div>
+                                <div class="news-meta">
+                                    <ul>
+                                        <li>From <a href="">New York Times</a></li>
+                                        <li>Jul 27, 2024</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-box">
+                        <div class="news-box-inner">
+                            <div class="news-thumbnail">
+                                <a href=""><img src="assets/images/demo/news-image-s5-01.png" alt=""></a>
+                            </div>
+                            <div class="news-info">
+                                <div class="news-headline">
+                                    <h3><a href="">Office of Israeli Prime Minister Benjamin Netanyahu
+                                        rejects Gantz’s
+                                        threat to
+                                        leave the government</a></h3>
+                                </div>
+                                <div class="news-summary">
+                                    <p>IDF recovers hostage’s body from Gaza one day after retrieving three others.
+                                        Desperate
+                                        Gazans grab aid boxes from moving trucks. Hear what ret. US general thinks about
+                                        Gantz’s
+                                        ultimatum to Netanyahu about Gaza plan </p>
+                                    <p>IDF recovers hostage’s body from Gaza one day after retrieving three others.
+                                        Desperate
+                                        Gazans grab aid boxes from moving trucks. Hear what ret. US general thinks about
+                                        Gantz’s
+                                        ultimatum to Netanyahu about Gaza plan </p>
+                                </div>
+                                <div class="news-meta">
+                                    <ul>
+                                        <li>From <a href="">New York Times</a></li>
+                                        <li>Jul 27, 2024</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <h2 class="news-block-heading"><span>Featured</span> News</h2>
+                <div class="thumbnail-news-list-wrapper">
+                    <div class="news-box">
+                        <div class="news-box-inner">
+                            <div class="news-thumbnail">
+                                <a href=""><img src="assets/images/demo/news-image-thumb-01.png" alt=""></a>
+                            </div>
+                            <div class="news-info">
+                                <div class="news-headline">
+                                    <h3><a href="">How low intensity exercise linked to reduced risks of depression</a>
+                                    </h3>
+                                </div>
+
+                                <div class="news-meta">
+                                    <ul>
+                                        <li>From <a href="">New York Times</a></li>
+                                        <li>Jul 27, 2024</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-box">
+                        <div class="news-box-inner">
+                            <div class="news-thumbnail">
+                                <a href=""><img src="assets/images/demo/news-image-thumb-02.png" alt=""></a>
+                            </div>
+                            <div class="news-info">
+                                <div class="news-headline">
+                                    <h3><a href="">How low intensity exercise linked to reduced risks of depression</a>
+                                    </h3>
+                                </div>
+
+                                <div class="news-meta">
+                                    <ul>
+                                        <li>From <a href="">New York Times</a></li>
+                                        <li>Jul 27, 2024</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-box">
+                        <div class="news-box-inner">
+                            <div class="news-thumbnail">
+                                <a href=""><img src="assets/images/demo/news-image-thumb-03.png" alt=""></a>
+                            </div>
+                            <div class="news-info">
+                                <div class="news-headline">
+                                    <h3><a href="">How low intensity exercise linked to reduced risks of depression</a>
+                                    </h3>
+                                </div>
+
+                                <div class="news-meta">
+                                    <ul>
+                                        <li>From <a href="">New York Times</a></li>
+                                        <li>Jul 27, 2024</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-box">
+                        <div class="news-box-inner">
+                            <div class="news-thumbnail">
+                                <a href=""><img src="assets/images/demo/news-image-thumb-04.png" alt=""></a>
+                            </div>
+                            <div class="news-info">
+                                <div class="news-headline">
+                                    <h3><a href="">How low intensity exercise linked to reduced risks of depression</a>
+                                    </h3>
+                                </div>
+
+                                <div class="news-meta">
+                                    <ul>
+                                        <li>From <a href="">New York Times</a></li>
+                                        <li>Jul 27, 2024</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-50">
+            <div class="col-lg-12">
+                <h2 class="news-block-heading"><a href=""><span>News</span> Analysis</a></h2>
+                <div class="horizontal-news-wrapper">
+                    <div class="news-box">
+                        <div class="news-box-inner">
+                            <div class="news-thumbnail">
+                                <a href=""><img src="assets/images/demo/news-image-s5-01.png" alt=""></a>
+                            </div>
+                            <div class="news-info">
+                                <div class="news-headline">
+                                    <h3 class=""><a href="">Local Businesses Thrive as City Economy Shows Growth</a>
+                                    </h3>
+                                </div>
+                                <div class="news-meta">
+                                    <ul>
+                                        <li>From <a href="">New York Times</a></li>
+                                        <li>Jul 27, 2024</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-box">
+                        <div class="news-box-inner">
+                            <div class="news-thumbnail">
+                                <a href=""><img src="assets/images/demo/news-image-s5-01.png" alt=""></a>
+                            </div>
+                            <div class="news-info">
+                                <div class="news-headline">
+                                    <h3 class=""><a href="">City’s Education Reform: New Schools and Programs</a></h3>
+                                </div>
+
+                                <div class="news-meta">
+                                    <ul>
+                                        <li>From <a href="">New York Times</a></li>
+                                        <li>Jul 27, 2024</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-box">
+                        <div class="news-box-inner">
+                            <div class="news-thumbnail">
+                                <a href=""><img src="assets/images/demo/news-image-s5-01.png" alt=""></a>
+                            </div>
+                            <div class="news-info">
+                                <div class="news-headline">
+                                    <h3 class=""><a href="">City Marathon Attracts International Runners and Fans</a>
+                                    </h3>
+                                </div>
+
+                                <div class="news-meta">
+                                    <ul>
+                                        <li>From <a href="">New York Times</a></li>
+                                        <li>Jul 27, 2024</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-box">
+                        <div class="news-box-inner">
+                            <div class="news-thumbnail">
+                                <a href=""><img src="assets/images/demo/news-image-s5-01.png" alt=""></a>
+                            </div>
+                            <div class="news-info">
+                                <div class="news-headline">
+                                    <h3 class=""><a href="">City’s Education Reform: New Schools and Programs</a></h3>
+                                </div>
+                                <div class="news-meta">
+                                    <ul>
+                                        <li>From <a href="">New York Times</a></li>
+                                        <li>Jul 27, 2024</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-50">
+            <div class="col-lg-12">
+                <h2 class="news-block-heading"><a href=""><span>The</span> Dispatch</a></h2>
+                <div class="horizontal-news-wrapper">
+                    <div class="news-box">
+                        <div class="news-box-inner">
+                            <div class="news-thumbnail">
+                                <a href=""><img src="assets/images/demo/news-image-s5-01.png" alt=""></a>
+                            </div>
+                            <div class="news-info">
+                                <div class="news-headline">
+                                    <h3 class=""><a href="">Local Businesses Thrive as City Economy Shows Growth</a>
+                                    </h3>
+                                </div>
+                                <div class="news-meta">
+                                    <ul>
+                                        <li>From <a href="">New York Times</a></li>
+                                        <li>Jul 27, 2024</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-box">
+                        <div class="news-box-inner">
+                            <div class="news-thumbnail">
+                                <a href=""><img src="assets/images/demo/news-image-s5-01.png" alt=""></a>
+                            </div>
+                            <div class="news-info">
+                                <div class="news-headline">
+                                    <h3 class=""><a href="">City’s Education Reform: New Schools and Programs</a></h3>
+                                </div>
+
+                                <div class="news-meta">
+                                    <ul>
+                                        <li>From <a href="">New York Times</a></li>
+                                        <li>Jul 27, 2024</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-box">
+                        <div class="news-box-inner">
+                            <div class="news-thumbnail">
+                                <a href=""><img src="assets/images/demo/news-image-s5-01.png" alt=""></a>
+                            </div>
+                            <div class="news-info">
+                                <div class="news-headline">
+                                    <h3 class=""><a href="">City Marathon Attracts International Runners and Fans</a>
+                                    </h3>
+                                </div>
+
+                                <div class="news-meta">
+                                    <ul>
+                                        <li>From <a href="">New York Times</a></li>
+                                        <li>Jul 27, 2024</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-box">
+                        <div class="news-box-inner">
+                            <div class="news-thumbnail">
+                                <a href=""><img src="assets/images/demo/news-image-s5-01.png" alt=""></a>
+                            </div>
+                            <div class="news-info">
+                                <div class="news-headline">
+                                    <h3 class=""><a href="">City’s Education Reform: New Schools and Programs</a></h3>
+                                </div>
+                                <div class="news-meta">
+                                    <ul>
+                                        <li>From <a href="">New York Times</a></li>
+                                        <li>Jul 27, 2024</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-50">
+            <div class="col-lg-12">
+                <h2 class="news-block-heading"><a href=""><span>Global</span> Profile</a></h2>
+                <div class="horizontal-news-wrapper">
+                    <div class="news-box">
+                        <div class="news-box-inner">
+                            <div class="news-thumbnail">
+                                <a href=""><img src="assets/images/demo/news-image-s5-01.png" alt=""></a>
+                            </div>
+                            <div class="news-info">
+                                <div class="news-headline">
+                                    <h3 class=""><a href="">Local Businesses Thrive as City Economy Shows Growth</a>
+                                    </h3>
+                                </div>
+                                <div class="news-meta">
+                                    <ul>
+                                        <li>From <a href="">New York Times</a></li>
+                                        <li>Jul 27, 2024</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-box">
+                        <div class="news-box-inner">
+                            <div class="news-thumbnail">
+                                <a href=""><img src="assets/images/demo/news-image-s5-01.png" alt=""></a>
+                            </div>
+                            <div class="news-info">
+                                <div class="news-headline">
+                                    <h3 class=""><a href="">City’s Education Reform: New Schools and Programs</a></h3>
+                                </div>
+
+                                <div class="news-meta">
+                                    <ul>
+                                        <li>From <a href="">New York Times</a></li>
+                                        <li>Jul 27, 2024</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-box">
+                        <div class="news-box-inner">
+                            <div class="news-thumbnail">
+                                <a href=""><img src="assets/images/demo/news-image-s5-01.png" alt=""></a>
+                            </div>
+                            <div class="news-info">
+                                <div class="news-headline">
+                                    <h3 class=""><a href="">City Marathon Attracts International Runners and Fans</a>
+                                    </h3>
+                                </div>
+
+                                <div class="news-meta">
+                                    <ul>
+                                        <li>From <a href="">New York Times</a></li>
+                                        <li>Jul 27, 2024</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-box">
+                        <div class="news-box-inner">
+                            <div class="news-thumbnail">
+                                <a href=""><img src="assets/images/demo/news-image-s5-01.png" alt=""></a>
+                            </div>
+                            <div class="news-info">
+                                <div class="news-headline">
+                                    <h3 class=""><a href="">City’s Education Reform: New Schools and Programs</a></h3>
+                                </div>
+                                <div class="news-meta">
+                                    <ul>
+                                        <li>From <a href="">New York Times</a></li>
+                                        <li>Jul 27, 2024</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</main>
+<footer class="site-footer">
+
+    <div class="footer-branding">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <a href=""><img src="assets/images/Logo-Light.svg" alt=""></a>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer-navigation">
+            <div class="container">
+                <div class="row row-gap-4">
+                    <div class="col-lg-2 col-md-3 col-sm-4">
+                        <div class="footer-widget footer-menu-widget">
+                            <h3 class="footer-widget-title">CITY NEWS</h3>
+                            <ul>
+                                <li><a href="">Urban Projects</a></li>
+                                <li><a href="">Local Business</a></li>
+                                <li><a href="">Public Safety Updates</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4">
+                        <div class="footer-widget footer-menu-widget">
+                            <h3 class="footer-widget-title">International</h3>
+                            <ul>
+                                <li><a href="">Road Conditions</a></li>
+                                <li><a href="">Mobility Solutions</a></li>
+                                <li><a href="">Cycling Paths</a></li>
+                                <li><a href="">Electric Transport</a></li>
+                                <li><a href="">City Navigation</a></li>
+                                <li><a href="">Infrastructure Development</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4">
+                        <div class="footer-widget footer-menu-widget">
+                            <h3 class="footer-widget-title">WEATHER</h3>
+                            <ul>
+                                <li><a href="">Weather Patterns</a></li>
+                                <li><a href="">Weather Alerts</a></li>
+                                <li><a href="">Historical Trends</a></li>
+                                <li><a href="">Weather Safety Tips</a></li>
+                                <li><a href="">Daily Weather Forecasts</a></li>
+                                <li><a href="">Climate Change Impact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4">
+                        <div class="footer-widget footer-menu-widget">
+                            <h3 class="footer-widget-title">HEALTH</h3>
+                            <ul>
+                                <li><a href="">Fitness Trends</a></li>
+                                <li><a href="">Health Issues</a></li>
+                                <li><a href="">Health Education</a></li>
+                                <li><a href="">Local Health Services</a></li>
+                                <li><a href="">Public Health Campaigns</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-8">
+                        <div class="footer-widget footer-newsletter-widget">
+                            <h3 class="footer-widget-title">Keep Up to Date with the Most Important News</h3>
+                            <form class="newsletter-form" action="#">
+                                <input type="email" placeholder="Email">
+                                <button type="submit">Subscribe Now</button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        © 2024 Inclusiveme
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.0/dist/cdn.min.js"></script>
+</body>
+</html>

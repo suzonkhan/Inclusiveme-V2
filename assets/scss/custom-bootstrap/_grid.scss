@@ -1,0 +1,182 @@
+// Variables for breakpoints
+$breakpoints: (
+        'sm': 576px,
+        'md': 768px,
+        'lg': 992px,
+        'xl': 1200px,
+        'xxl': 1400px
+);
+
+// Mixin for media queries
+@mixin media-breakpoint-up($name) {
+  @if map-has-key($breakpoints, $name) {
+    @media (min-width: #{map-get($breakpoints, $name)}) {
+      @content;
+    }
+  }
+}
+
+// Container
+.container {
+  width: 100%;
+  padding-right: 30px;
+  padding-left: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1440px;
+  @media screen and (max-width: 767px) {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  //@include media-breakpoint-up(sm) {
+  //  max-width: 540px;
+  //}
+  //
+  //@include media-breakpoint-up(md) {
+  //  max-width: 720px;
+  //}
+  //
+  //@include media-breakpoint-up(lg) {
+  //  max-width: 960px;
+  //}
+  //
+  //@include media-breakpoint-up(xl) {
+  //  max-width: 1140px;
+  //}
+  //
+  //@include media-breakpoint-up(xxl) {
+  //  max-width: 1320px;
+  //}
+}
+
+// Row
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+// Column Base
+.col,
+[class*='col-'] {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+// Generate Column Classes for all breakpoints
+@mixin generate-col-classes($breakpoint) {
+  @include media-breakpoint-up($breakpoint) {
+    .col-#{$breakpoint}-1 {
+      flex: 0 0 auto;
+      width: 8.333333%;
+    }
+    .col-#{$breakpoint}-2 {
+      flex: 0 0 auto;
+      width: 16.666667%;
+    }
+    .col-#{$breakpoint}-3 {
+      flex: 0 0 auto;
+      width: 25%;
+    }
+    .col-#{$breakpoint}-4 {
+      flex: 0 0 auto;
+      width: 33.333333%;
+    }
+    .col-#{$breakpoint}-5 {
+      flex: 0 0 auto;
+      width: 41.666667%;
+    }
+    .col-#{$breakpoint}-6 {
+      flex: 0 0 auto;
+      width: 50%;
+    }
+    .col-#{$breakpoint}-7 {
+      flex: 0 0 auto;
+      width: 58.333333%;
+    }
+    .col-#{$breakpoint}-8 {
+      flex: 0 0 auto;
+      width: 66.666667%;
+    }
+    .col-#{$breakpoint}-9 {
+      flex: 0 0 auto;
+      width: 75%;
+    }
+    .col-#{$breakpoint}-10 {
+      flex: 0 0 auto;
+      width: 83.333333%;
+    }
+    .col-#{$breakpoint}-11 {
+      flex: 0 0 auto;
+      width: 91.666667%;
+    }
+    .col-#{$breakpoint}-12 {
+      flex: 0 0 auto;
+      width: 100%;
+    }
+  }
+}
+
+@include generate-col-classes(sm);
+@include generate-col-classes(md);
+@include generate-col-classes(lg);
+@include generate-col-classes(xl);
+@include generate-col-classes(xxl);
+
+// Generate col classes for each breakpoint
+@mixin generate-col {
+  .col-1 {
+    flex: 0 0 auto;
+    width: 8.333333%;
+  }
+  .col-2 {
+    flex: 0 0 auto;
+    width: 16.666667%;
+  }
+  .col-3 {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+  .col-4 {
+    flex: 0 0 auto;
+    width: 33.333333%;
+  }
+  .col-5 {
+    flex: 0 0 auto;
+    width: 41.666667%;
+  }
+  .col-6 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+  .col-7 {
+    flex: 0 0 auto;
+    width: 58.333333%;
+  }
+  .col-8 {
+    flex: 0 0 auto;
+    width: 66.666667%;
+  }
+  .col-9 {
+    flex: 0 0 auto;
+    width: 75%;
+  }
+  .col-10 {
+    flex: 0 0 auto;
+    width: 83.333333%;
+  }
+  .col-11 {
+    flex: 0 0 auto;
+    width: 91.666667%;
+  }
+  .col-12 {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+}
+
+@include generate-col;
+
