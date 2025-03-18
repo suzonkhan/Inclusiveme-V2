@@ -13,62 +13,51 @@
     <link rel="stylesheet" href="assets/css/main-style.css">
 </head>
 <body x-data="{ direction: 'ltr' }" :dir="direction">
-<header class="about-header">
-    <div class="top-header">
-        <div class="container">
-            <div class="top-header-row">
-
-                <div class="header-logo-col">
-                    <a href=""><img src="assets/images/logo.svg" alt=""></a>
-                </div>
-                <div class="header-search-col">
-                    <div class="main-menu-wrapper">
-                        <div class="container">
-                            <div class="main-menu">
-                                <ul>
-                                    <li class="current-menu-item"><a href="breaking.html">Breaking</a></li>
-                                    <li><a href="world.html">World</a></li>
-                                    <li><a href="politics.html">Politics</a></li>
-                                    <li><a href="business.html">Business</a></li>
-                                    <li><a href="lifestyle.html">Lifestyle</a></li>
-                                    <li><a href="immigration.html">Immigration</a></li>
-                                    <li><a href="jobs.html">Jobs</a></li>
-                                    <li><a href="sports.html">Sports</a></li>
-                                    <li class="highlighted-item"><a href="">About Us</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="header-social-col">
-                    <button>
-
-                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12.4653 11.4631H11.6776L11.3984 11.1941C12.595 9.79883 13.2132 7.89534 12.8742 5.87226C12.4055 3.10173 10.0921 0.889295 7.29996 0.550453C3.0819 0.032225 -0.468049 3.58009 0.0504827 7.79568C0.389523 10.5861 2.60326 12.8982 5.37541 13.3666C7.39968 13.7055 9.30429 13.0876 10.7003 11.8917L10.9696 12.1707V12.958L15.2076 17.1935C15.6164 17.6021 16.2845 17.6021 16.6934 17.1935C17.1022 16.7849 17.1022 16.1172 16.6934 15.7086L12.4653 11.4631ZM6.48227 11.4631C3.9993 11.4631 1.99498 9.45999 1.99498 6.97847C1.99498 4.49696 3.9993 2.49381 6.48227 2.49381C8.96525 2.49381 10.9696 4.49696 10.9696 6.97847C10.9696 9.45999 8.96525 11.4631 6.48227 11.4631Z"
-                                  fill="#014764"/>
-                        </svg>
-                    </button>
-                </div>
-                <div class="top-header-menu">
-
-                    <button class="subscribe-btn"> Subscribe</button>
-                    <button>Log in</button>
-                </div>
+<header x-data="{ showTranslationSwitch: false, showSearchBar: false }" class="secondary-header">
+    <div class="container">
+        <div class="secondary-header-row">
+            <div class="header-logo">
+                <a href=""><img src="assets/images/logo.svg" alt=""></a>
+            </div>
+            <div class="main-menu">
+                <ul>
+                    <li class="current-menu-item"><a href="breaking.html">Breaking</a></li>
+                    <li><a href="world.html">World</a></li>
+                    <li><a href="politics.html">Politics</a></li>
+                    <li><a href="business.html">Business</a></li>
+                    <li><a href="lifestyle.html">Lifestyle</a></li>
+                    <li><a href="immigration.html">Immigration</a></li>
+                    <li><a href="jobs.html">Jobs</a></li>
+                    <li><a href="sports.html">Sports</a></li>
+                    <li class="highlighted-item"><a href="">About Us</a></li>
+                </ul>
+            </div>
+            <div class="header-cta">
+                <button class="search-btn">
+                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.4653 11.4631H11.6776L11.3984 11.1941C12.595 9.79883 13.2132 7.89534 12.8742 5.87226C12.4055 3.10173 10.0921 0.889295 7.29996 0.550453C3.0819 0.032225 -0.468049 3.58009 0.0504827 7.79568C0.389523 10.5861 2.60326 12.8982 5.37541 13.3666C7.39968 13.7055 9.30429 13.0876 10.7003 11.8917L10.9696 12.1707V12.958L15.2076 17.1935C15.6164 17.6021 16.2845 17.6021 16.6934 17.1935C17.1022 16.7849 17.1022 16.1172 16.6934 15.7086L12.4653 11.4631ZM6.48227 11.4631C3.9993 11.4631 1.99498 9.45999 1.99498 6.97847C1.99498 4.49696 3.9993 2.49381 6.48227 2.49381C8.96525 2.49381 10.9696 4.49696 10.9696 6.97847C10.9696 9.45999 8.96525 11.4631 6.48227 11.4631Z"
+                              fill="#014764"/>
+                    </svg>
+                </button>
+                <button class="subscribe-btn"> Subscribe</button>
+                <button class="login-btn">Log in</button>
             </div>
         </div>
     </div>
 
 </header>
-
-<main class="regular-page-wrapper">
-
-    <div class="page-wrapper-artical">
-        <div class="banner-wrapper">
-            <div class="banner-left ">
+<div class="page-banner">
+    <div class="container">
+        <div class="ads-banner-layout">
+            <div class="banner-col">
                 <img src="assets/images/demo/1012-572.png" alt="">
 
+            </div>
+            <div class="ads-col">
+                <img src="assets/images/demo/228-785.png" alt="">
+            </div>
+            <div class="title-col">
                 <div class="page-title-wrapper">
                     <div class="inner-page-title">
                         <h1>Politics </h1>
@@ -93,19 +82,19 @@
                     </div>
                 </div>
 
-                <h2 class=" ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                <h2 class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                     incididunt</h2>
 
-
-            </div>
-            <div class="banner-right">
-                <img src="assets/images/demo/228-785.png" alt="">
             </div>
         </div>
+    </div>
 
+</div>
 
-        <div class="main-container">
-            <div class="container-left">
+<main class="page-wrapper" style="padding-top: 8px">
+    <div class="container">
+        <div class="article-content">
+            <div class="regular-content-col">
 
                 <p class="small">
                     <b> Da una parte la conta dei morti</b> che continua a salire, dall'altra un'ondata impressionante
@@ -172,101 +161,96 @@
                     insufficienza di mezzi dispiegati sul terreno.
                 </p>
 
-                    <div class="left-news">
-
-                        <h2 class=" news-header  artical-news " style="margin: 0 0 14px;" ><a href="" style="text-decoration: none;"><span
-                                class="news-header artical-news">Up Next</span></a></h2>
-                        <div class="about-news-list-wrapper">
-                            <div class="about-news-box artical-box" style="margin-bottom: 0;">
-                                <div class="about-news-box-inner">
-                                    <div class="about-news-thumbnail">
-                                        <a href=""><img src="assets/images/demo/148-135.png" alt=""></a>
-                                    </div>
-                                </div>
-                                <div class="news-info">
-                                    <div class="news-meta">
-                                        <ul>
-                                            <li>From <a href=""> ANSA</a></li>
-                                        </ul>
-
-                                    </div>
-                                    <div class="news-headline">
-                                        <h3 class="news-headline">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                            do</h3>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="about-news-box" style="margin-bottom: 0;">
-                                <div class="about-news-box-inner">
-                                    <div class="about-news-thumbnail">
-                                        <a href=""><img src="assets/images/demo/148-135.png" alt=""></a>
-                                    </div>
-                                </div>
-                                <div class="news-info">
-                                    <div class="news-meta">
-                                        <ul>
-                                            <li>From <a href=""> ANSA</a></li>
-                                        </ul>
-
-                                    </div>
-                                    <div class="news-headline">
-                                        <h3 class="news-headline">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                            do</h3>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="about-news-box" style="margin-bottom: 0;">
-                                <div class="about-news-box-inner">
-                                    <div class="about-news-thumbnail">
-                                        <a href=""><img src="assets/images/demo/148-135.png" alt=""></a>
-                                    </div>
-                                </div>
-                                <div class="news-info">
-                                    <div class="news-meta">
-                                        <ul>
-                                            <li>From <a href=""> ANSA</a></li>
-                                        </ul>
-
-                                    </div>
-                                    <div class="news-headline">
-                                        <h3 class="news-headline">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                            do</h3>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="about-news-box" style="margin-bottom: 0; height: 50px;">
-                                <div class="about-news-box-inner">
-                                    <div class="about-news-thumbnail">
-                                        <a href=""><img src="assets/images/demo/148-135.png" alt=""></a>
-                                    </div>
-                                </div>
-                                <div class="news-info">
-                                    <div class="news-meta">
-                                        <ul>
-                                            <li>From <a href=""> ANSA</a></li>
-                                        </ul>
-
-                                    </div>
-                                    <div class="news-headline">
-                                        <h3 class="news-headline">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                            do</h3>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                        </div>
-
-
+                <div class="relative-news-wrapper">
+                    <div class="news-section-title-wrapper">
+                        <h2> Up Next </h2>
                     </div>
 
+                    <div class="relative-news-list-wrapper">
+                        <div class="news-box">
+                            <div class="news-box-inner">
+                                <div class="news-thumbnail">
+                                    <a href=""><img src="assets/images/demo/148-135.png" alt=""></a>
+                                </div>
+                                <div class="news-info">
+                                    <div class="news-meta">
+                                        <ul>
+                                            <li>From <a href="">New York Times</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="news-headline">
+                                        <h3 class=""><a href="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                            do </a></h3>
+                                    </div>
 
 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news-box">
+                            <div class="news-box-inner">
+                                <div class="news-thumbnail">
+                                    <a href=""><img src="assets/images/demo/148-135.png" alt=""></a>
+                                </div>
+                                <div class="news-info">
+                                    <div class="news-meta">
+                                        <ul>
+                                            <li>From <a href="">New York Times</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="news-headline">
+                                        <h3 class=""><a href="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                            do </a></h3>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news-box">
+                            <div class="news-box-inner">
+                                <div class="news-thumbnail">
+                                    <a href=""><img src="assets/images/demo/148-135.png" alt=""></a>
+                                </div>
+                                <div class="news-info">
+                                    <div class="news-meta">
+                                        <ul>
+                                            <li>From <a href="">New York Times</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="news-headline">
+                                        <h3 class=""><a href="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                            do </a></h3>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news-box">
+                            <div class="news-box-inner">
+                                <div class="news-thumbnail">
+                                    <a href=""><img src="assets/images/demo/148-135.png" alt=""></a>
+                                </div>
+                                <div class="news-info">
+                                    <div class="news-meta">
+                                        <ul>
+                                            <li>From <a href="">New York Times</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="news-headline">
+                                        <h3 class=""><a href="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                            do </a></h3>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="container-right">
+            <div class="translated-content-col" style="padding-top: 76px">
                 <div class="page-title-wrapper">
                     <div class="inner-page-title">
                         <h1>Politics</h1>
@@ -293,8 +277,8 @@
                 <img style="margin-top: 17px;" src="assets/images/demo/504-321.png" alt="">
 
 
-
-                <h2 style="margin-top: 15px;margin-bottom: 18px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                <h2 class="translated-content-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor
                     incididunt</h2>
 
                 <p class="small">
@@ -352,28 +336,24 @@
 
             </div>
         </div>
-        <div class="container-news">
-            <div class="news-latter-section-wrapper news">
-                <div>
-                    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </h2>
+        <div class="news-latter-section-wrapper">
+            <div>
+                <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </h2>
+            </div>
+            <div>
+                <div class="language-switch-wrapper" style="margin-bottom: 30px">
+                    <select name="">
+                        <option value="">Select language</option>
+                    </select>
                 </div>
-                <div>
-                    <div class="language-switch-wrapper" style="margin-bottom: 30px">
-                        <select name="">
-                            <option value="">Select language</option>
-                        </select>
-                    </div>
-                    <form class="newsletter-form" action="#">
-                        <input type="email" placeholder="Email">
-                        <button type="submit">Subscribe Now</button>
-                    </form>
-                </div>
+                <form class="newsletter-form" action="#">
+                    <input type="email" placeholder="Email">
+                    <button type="submit">Subscribe Now</button>
+                </form>
             </div>
         </div>
-
     </div>
-
-    <div class="news-section bg-primary-100 jobs-news-section" style="margin: 2px 0 35px; padding: 16px 0">
+    <div class="news-section bg-primary-100 jobs-news-section" style="margin: 55px 0 14px; padding: 16px 0">
         <div class="container">
             <h2 class="news-block-heading" style="margin-bottom: 17px"><a href="">Jobs</a></h2>
             <div class="news-carousel" style="gap: 29px">
@@ -441,7 +421,6 @@
         </div>
 
     </div>
-
 
 </main>
 <footer class="site-footer">

@@ -1058,10 +1058,6 @@ form.newsletter-form button {
   font-weight: 500;
 }
 
-.page-banner {
-  text-align: center;
-}
-
 .about-content {
   display: grid;
   grid-template-columns: 643px 542px;
@@ -1181,6 +1177,96 @@ form.newsletter-form button {
   line-height: 120%;
 }
 .about-news-wrapper .news-box-inner .news-meta {
+  color: #015F86;
+}
+
+.ads-banner-layout {
+  display: grid;
+  grid-template-columns: 1fr 228px;
+}
+.ads-banner-layout .ads-col {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+.ads-banner-layout .title-col {
+  padding-top: 8px;
+}
+.ads-banner-layout img {
+  display: block;
+}
+.ads-banner-layout h2 {
+  margin: 32px 0 0;
+  font-size: 40px;
+  line-height: 120%;
+  font-weight: 600;
+}
+
+.article-content {
+  display: grid;
+  grid-template-columns: 1fr 506px;
+  gap: 90px;
+  padding-right: 34px;
+}
+.article-content img {
+  display: block;
+}
+.article-content p {
+  font-family: "Noto Sans", serif;
+  font-size: 19px;
+  line-height: 127%;
+  margin-bottom: 22px;
+}
+.article-content p.small {
+  font-size: 17px;
+  line-height: 130%;
+}
+.article-content h2.translated-content-title {
+  margin: 17px 0;
+  font-size: 40px;
+  line-height: 120%;
+  font-weight: 600;
+}
+
+.artical-box {
+  margin-bottom: 0;
+}
+
+.news-header {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin: 0 0 14px;
+}
+
+.relative-news-wrapper {
+  padding-top: 13px;
+}
+.relative-news-wrapper .relative-news-list-wrapper {
+  margin: 6px 0 21px;
+  display: grid;
+  gap: 16px;
+}
+.relative-news-wrapper .relative-news-list-wrapper .news-box-inner {
+  display: grid;
+  grid-template-columns: 148px 1fr;
+  gap: 15px;
+}
+.relative-news-wrapper .relative-news-list-wrapper .news-box-inner .news-thumbnail {
+  margin-bottom: 0;
+}
+.relative-news-wrapper .relative-news-list-wrapper .news-box-inner .news-meta {
+  margin-bottom: 7px;
+}
+.relative-news-wrapper .relative-news-list-wrapper .news-box-inner .news-headline {
+  margin-bottom: 0;
+}
+.relative-news-wrapper .relative-news-list-wrapper .news-box-inner .news-headline h3 {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 120%;
+}
+.relative-news-wrapper .relative-news-list-wrapper .news-box-inner .news-meta {
   color: #015F86;
 }
 

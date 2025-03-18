@@ -1,39 +1,37 @@
+.ads-banner-layout {
+  display: grid;
+  grid-template-columns:1fr 228px;
 
-.page-wrapper-artical{
 
-    padding: 0  100px 35px   100px;
-    max-width: 1440px;
-    margin: 0 auto;
+  .ads-col {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
   }
 
-.banner-wrapper {
-  display: flex;
-
+  .title-col {
+    padding-top: 8px;
   }
 
-  .banner-left {
-    width: 1012px;
+  img {
+    display: block;
   }
-  .banner-right {
-    width: 228px;
-  }
-  h3 {
-    font-size: 23px;
-    font-weight: 600;
-    line-height: 120%;
-    margin: 5px 0 22px;
-  }
+
   h2 {
-    margin: 32px 0 34px;
+    margin: 32px 0 0;
     font-size: 40px;
     line-height: 120%;
     font-weight: 600;
   }
+}
 
-.main-container {
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 90px;
+.article-content {
+  display: grid;
+  grid-template-columns: 1fr 506px;
+  gap: 90px;
+  padding-right: 34px;
+
   img {
     display: block;
   }
@@ -50,36 +48,79 @@
     }
   }
 
-  h3 {
-    font-size: 23px;
-    font-weight: 600;
-    line-height: 120%;
-    margin: 5px 0 22px;
-  }
-  h2 {
-    margin: 32px 0 34px;
+  //h3 {
+  //  font-size: 23px;
+  //  font-weight: 600;
+  //  line-height: 120%;
+  //  margin: 5px 0 22px;
+  //}
+
+  h2.translated-content-title {
+    margin: 17px 0;
     font-size: 40px;
     line-height: 120%;
     font-weight: 600;
   }
 }
-.container-left {
-  width: 608px;
-}
-.container-right {
-  width: 506px;
-  margin-top: 48px;
 
-  img{
-    display: block;
-  }
+//
+//.container-left {
+//  width: 608px;
+//}
+//
+//.container-right {
+//  width: 506px;
+//  margin-top: 48px;
+//
+//  img {
+//    display: block;
+//  }
+//}
+
+.artical-box {
+  margin-bottom: 0;
 }
 
-.artical-box{
-  margin-bottom: 0 ;
-}
-.artical-news {
+.news-header {
   padding-top: 0;
   padding-bottom: 0;
-  margin :0 0 14px;
+  margin: 0 0 14px;
+}
+
+.relative-news-wrapper {
+  padding-top: 13px;
+
+  .relative-news-list-wrapper {
+    margin: 6px 0 21px;
+    display: grid;
+    gap: 16px;
+
+    .news-box-inner {
+      display: grid;
+      grid-template-columns: 148px 1fr;
+      gap: 15px;
+
+      .news-thumbnail {
+        margin-bottom: 0;
+      }
+
+      .news-meta {
+        margin-bottom: 7px;
+      }
+
+      .news-headline {
+        margin-bottom: 0;
+
+        h3 {
+          font-size: 30px;
+          font-weight: 600;
+          line-height: 120%;
+        }
+      }
+
+      .news-meta {
+        color: #015F86;
+      }
+    }
+  }
 }
