@@ -40,6 +40,8 @@
 }
 
 .news-meta {
+  color: $dark-color-100;
+
   ul {
     margin: 0;
     padding: 0;
@@ -49,14 +51,14 @@
     li {
       list-style: none;
       display: inline-block;
-      color: $dark-color-100;
+      color: inherit;
       font-size: 12px;
       line-height: 16px;
       letter-spacing: -1%;
 
       a {
         text-decoration: none;
-        color: $dark-color-100;
+        color: inherit;
       }
     }
   }
@@ -352,6 +354,7 @@
     color: $primary-color-500;
   }
 }
+
 .jobs-news-section {
   color: $dark-color-900;
 
@@ -360,8 +363,10 @@
   }
 
   .news-meta {
+    color: $primary-color-500;
+
     li {
-      color: $primary-color-500
+      color: inherit;
     }
 
     a {
